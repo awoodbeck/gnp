@@ -1,0 +1,29 @@
+syntax = "proto3";
+package housework;
+
+option go_package = "github.com/awoodbeck/gnp/ch12/housework/v1/housework";
+
+message Chore {
+  bool complete = 1;
+  string description = 2;
+}
+
+message Chores {
+  repeated Chore chores = 1;
+}
+
+service RobotMaid {
+  rpc Add (Chores) returns (Response) {}
+  rpc Complete (CompleteRequest) returns (Response) {}
+  rpc List (Empty) returns (Chores) {}
+}
+
+message CompleteRequest {
+  int32 chore_number = 1;
+}
+
+message Empty {}
+
+message Response {
+  string message = 1;
+}
