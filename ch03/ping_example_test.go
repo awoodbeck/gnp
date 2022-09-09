@@ -4,10 +4,11 @@ import (
 	"context"
 	"fmt"
 	"io"
+	"testing"
 	"time"
 )
 
-func ExamplePinger() {
+func TestExamplePinger(t *testing.T) {
 	ctx, cancel := context.WithCancel(context.Background())
 	r, w := io.Pipe() // in lieu of net.Conn
 	done := make(chan struct{})
