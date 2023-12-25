@@ -50,7 +50,7 @@ func TestDial(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-
+	conn.Write([]byte("Hello World!"))
 	conn.Close()
 	<-done
 	listener.Close()
