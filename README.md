@@ -25,7 +25,64 @@ Once cloned, you can change into the `gnp` directory and run all of the tests, l
 
     cd gnp
     go test -timeout 300s -race -bench=. ./...
-    
+
+with the following typical results:
+```fish
+PASS
+ok  	github.com/awoodbeck/gnp/ch03	22.760s
+PASS
+ok  	github.com/awoodbeck/gnp/ch04	1.212s
+PASS
+ok  	github.com/awoodbeck/gnp/ch05/echo	12.046s
+?   	github.com/awoodbeck/gnp/ch06/sha512-256sum	[no test files]
+2024/12/16 17:38:05 [127.0.0.1:44793] requested file: test
+2024/12/16 17:38:05 [127.0.0.1:44793] sent 148 blocks
+PASS
+ok  	github.com/awoodbeck/gnp/ch06/tftp	1.050s
+?   	github.com/awoodbeck/gnp/ch06/tftp/tftp	[no test files]
+?   	github.com/awoodbeck/gnp/ch07/creds	[no test files]
+?   	github.com/awoodbeck/gnp/ch07/creds/auth	[no test files]
+goos: linux
+goarch: amd64
+pkg: github.com/awoodbeck/gnp/ch07/echo
+cpu: AMD Ryzen 5 PRO 2500U w/ Radeon Vega Mobile Gfx
+BenchmarkEchoServerUnixPacket-8     	   32089	     33895 ns/op
+BenchmarkEchoServerUnixDatagram-8   	   28700	     36013 ns/op
+BenchmarkEchoServerUDP-8            	   31693	     39171 ns/op
+BenchmarkEchoServerTCP-8            	   24196	     58420 ns/op
+BenchmarkEchoServerUnix-8           	   43057	     35109 ns/op
+PASS
+ok  	github.com/awoodbeck/gnp/ch07/echo	9.341s
+PASS
+ok  	github.com/awoodbeck/gnp/ch08	6.897s
+PASS
+ok  	github.com/awoodbeck/gnp/ch09	1.045s
+PASS
+ok  	github.com/awoodbeck/gnp/ch09/handlers	1.025s
+PASS
+ok  	github.com/awoodbeck/gnp/ch09/middleware	2.060s
+?   	github.com/awoodbeck/gnp/ch10	[no test files]
+?   	github.com/awoodbeck/gnp/ch10/backend	[no test files]
+2024/12/16 17:38:27 http: TLS handshake error from 127.0.0.1:51674: remote error: tls: bad certificate
+PASS
+ok  	github.com/awoodbeck/gnp/ch11	3.393s
+?   	github.com/awoodbeck/gnp/ch11/cert	[no test files]
+?   	github.com/awoodbeck/gnp/ch12/client	[no test files]
+?   	github.com/awoodbeck/gnp/ch12/cmd	[no test files]
+?   	github.com/awoodbeck/gnp/ch12/gob	[no test files]
+?   	github.com/awoodbeck/gnp/ch12/housework	[no test files]
+?   	github.com/awoodbeck/gnp/ch12/housework/v1	[no test files]
+?   	github.com/awoodbeck/gnp/ch12/json	[no test files]
+?   	github.com/awoodbeck/gnp/ch12/protobuf	[no test files]
+?   	github.com/awoodbeck/gnp/ch12/server	[no test files]
+PASS
+ok  	github.com/awoodbeck/gnp/ch13	2.055s
+?   	github.com/awoodbeck/gnp/ch13/instrumentation	[no test files]
+?   	github.com/awoodbeck/gnp/ch13/instrumentation/metrics	[no test files]
+?   	github.com/awoodbeck/gnp/ch14/aws	[no test files]
+?   	github.com/awoodbeck/gnp/ch14/azure	[no test files]
+```
+
 Alternatively, run the tests from a single chapter:
 
     go test -v -timeout 300s -race -bench=. ./ch03/dial_fanout_test.go
@@ -97,3 +154,7 @@ ok      github.com/awoodbeck/gnp/ch13   1.076s
 while in development, but the repository did not. Before publishing, my energy was entirely focused
 on completing the book, and I couldn't justify renaming this repository and correcting all
 references to it while the book's deadline loomed. Perhaps in the second edition.
+
+### Updates
+
+* _December 2024_ -- Repo was updated to work with the current latest Go release, 1.23.4. Changes were very minor and still follow the original published work. Note that the update was performed and tested on Linux Mint 22 and the fish shell version 3.7.0. Docker version 27.4.0, build bde2b89 was used for the Docker test.
