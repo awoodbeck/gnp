@@ -50,8 +50,8 @@ func Example_zapJSON() {
 	example.Info("test info message")
 
 	// Output:
-	// {"level":"debug","name":"example","caller":"ch13/zap_test.go:49","msg":"test debug message","version":"go1.23.4"}
-	// {"level":"info","name":"example","caller":"ch13/zap_test.go:50","msg":"test info message","version":"go1.23.4"}
+	// {"level":"debug","name":"example","caller":"ch13/zap_test.go:49","msg":"test debug message","version":"go1.23.6"}
+	// {"level":"info","name":"example","caller":"ch13/zap_test.go:50","msg":"test info message","version":"go1.23.6"}
 }
 
 func Example_zapConsole() {
