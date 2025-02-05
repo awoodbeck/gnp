@@ -1,8 +1,8 @@
 module github.com/awoodbeck/gnp
 
-go 1.22
+go 1.23
 
-toolchain go1.23.4
+toolchain go1.23.6
 
 require (
 	github.com/awoodbeck/caddy-restrict-prefix v1.0.4
@@ -15,7 +15,7 @@ require (
 	github.com/prometheus/client_golang v1.19.1
 	go.uber.org/multierr v1.11.0
 	go.uber.org/zap v1.27.0
-	golang.org/x/net v0.28.0
+	golang.org/x/net v0.33.0
 	golang.org/x/sys v0.28.0
 	google.golang.org/grpc v1.63.2
 	google.golang.org/protobuf v1.34.1
@@ -58,7 +58,7 @@ require (
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-sql-driver/mysql v1.7.1 // indirect
 	github.com/go-task/slim-sprig v0.0.0-20230315185526-52ccab3ef572 // indirect
-	github.com/golang/glog v1.2.0 // indirect
+	github.com/golang/glog v1.2.4 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/google/cel-go v0.20.1 // indirect
 	github.com/google/certificate-transparency-go v1.1.8-0.20240110162603-74a5dd331745 // indirect
