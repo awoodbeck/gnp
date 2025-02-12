@@ -98,7 +98,7 @@ in the `gnp` directory:
 
     git clone git@github.com:awoodbeck/gnp.git
     cd gnp
-    docker-buildx build -t gnp .
+    docker buildx build -t gnp .
 
 Once finished, you should see a `gnp` image in the output of the `docker image ls`
 command, like this:
@@ -157,4 +157,4 @@ references to it while the book's deadline loomed. Perhaps in the second edition
 
 ### Updates
 
-* _December 2024_ -- Repo was updated to work with the current latest Go release, 1.23.4. Changes were very minor and still follow the original published work. Note that the update was performed and tested on Linux Mint 22 and the fish shell version 3.7.0. Docker version 27.4.0, build bde2b89 was used for the Docker test.
+* _February 2025_ -- Updated to use Go release 1.24.0. Tested on Linux Mint 22.1. Docker version 27.5.1, build 9f9e405.
