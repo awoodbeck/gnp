@@ -44,7 +44,7 @@ data into a series of bytes, sends those bytes over the network, and trusts
 the receiver to convert them back into structured data. Transforming an
 object into a series of bytes this way is called *data serialization*.
 Serialized data is equally suitable for transmission over a network or
-persistence to disk; any code that understands the serialization format can
+persistence to disk. Any code that understands the serialization format can
 reconstruct the original object from the bytes alone.
 
 You've serialized data in this book already, perhaps without labeling it as
@@ -366,10 +366,10 @@ text-based serialization format in use today. It represents data using
 key-value pairs and arrays built from strings, numbers, Booleans, and null,
 and nearly every contemporary language offers first-class support for it —
 one reason it's the lingua franca of RESTful APIs. You worked with Go's
-`encoding/json` package in Chapter 8; here, you'll use it to back the
+`encoding/json` package in Chapter 8. Here, you'll use it to back the
 housework application. Listing 12-10 shows the contents of the
 *housework.db* file that the JSON storage implementation produces, formatted
-for readability. (The encoder writes it as a single line; you could use the
+for readability. (The encoder writes it as a single line. You could use the
 encoder's `SetIndent` method to make the file itself look like this.)
 
 ```json
@@ -530,7 +530,7 @@ quicker to process than the equivalent JSON.
 
 Protocol buffers are a binary serialization format designed by Google for
 exchanging data across platforms and languages. Like JSON, protocol buffers
-are language neutral; like Gob, they're compact and fast. Unlike either,
+are language neutral. Like Gob, they're compact and fast. Unlike either,
 they're *schema first*: you define your messages in a *.proto* file using
 the protocol buffer language, then compile that file into code for each
 language that needs to read or write the data. We'll use the proto3 syntax
@@ -549,7 +549,7 @@ type*
 
 You define a *message* with the `message` keyword and a Pascal-cased name.
 Each field has a type, a snake-cased name, and a field number that is unique
-within the message. The name is for you; the number is what identifies the
+within the message. The name is for you. The number is what identifies the
 field in the binary payload, which means field numbers must never change
 once in use, or you'll break backward compatibility with every serialized
 payload that came before. Adding new fields and new messages is always safe.
@@ -831,7 +831,7 @@ reuse the *cert.pem* and *key.pem* files you created in Chapter 11 for the
 server, and the client will pin the server's certificate, as in the
 "Generating Certificates for Authentication" section of that chapter.
 Copies of both files live in this directory's *server* subdirectory, valid
-into 2030; regenerate them per Chapter 11 if you're reading this from the
+into 2030. Regenerate them per Chapter 11 if you're reading this from the
 far future, and say hello to Rosie for me.
 
 On the server side, your job is to implement the `RobotMaidServer`
@@ -934,7 +934,7 @@ client.
 
 The `Complete` method returns its error using the `status` package ❹
 rather than `fmt.Errorf`. Any plain error you return crosses the wire as
-the generic `Unknown` status code; wrapping the message in a status error
+the generic `Unknown` status code. Wrapping the message in a status error
 assigns it a meaningful code — `OutOfRange` here — that clients can inspect
 with `status.Code` and act on. Reserve plain errors for problems you
 haven't classified yet.
@@ -1096,7 +1096,7 @@ func list(ctx context.Context,
 This is Listing 12-5 with the storage swapped for a `RobotMaidClient` ❶,
 the client-side counterpart that `protoc-gen-go-grpc` generated alongside
 the server interface. Asking the server for the chore list is a method
-call ❷ that accepts a context and an `Empty` message; the fact that the
+call ❷ that accepts a context and an `Empty` message. The fact that the
 answer arrives over a TLS connection is gRPC's business, not yours.
 
 Listing 12-25 sends new chores to the server.

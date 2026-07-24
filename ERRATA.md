@@ -64,8 +64,8 @@ listing.
 ### Page 219: Go version required to build Caddy from source
 
 The "Building Caddy from Source Code" section says you need at least
-Go 1.14. Caddy's minimum Go version moves with each of its releases;
-consult the `go.mod` file in Caddy's repository for the version it
+Go 1.14. Caddy's minimum Go version moves with each of its releases.
+Consult the `go.mod` file in Caddy's repository for the version it
 currently requires.
 
 ## Chapter 12: Data Serialization
@@ -108,4 +108,4 @@ The Google Cloud Functions discussion says deployed code must avoid
 language features added after Go 1.13 because of the platform's supported
 runtime. The constraint is real, but the version was a snapshot of the
 platform in 2020. Consult the Go runtimes Cloud Functions currently
-supports; they have long since moved past Go 1.13.
+supports. They have long since moved past Go 1.13.
