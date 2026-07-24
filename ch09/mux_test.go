@@ -25,11 +25,13 @@ func TestSimpleMux(t *testing.T) {
 		w.WriteHeader(http.StatusNoContent)
 	})
 	serveMux.HandleFunc("/hello", func(w http.ResponseWriter,
-		r *http.Request) {
+		r *http.Request,
+	) {
 		_, _ = fmt.Fprint(w, "Hello friend.")
 	})
 	serveMux.HandleFunc("/hello/there/", func(w http.ResponseWriter,
-		r *http.Request) {
+		r *http.Request,
+	) {
 		_, _ = fmt.Fprint(w, "Why, hello there.")
 	})
 	mux := drainAndClose(serveMux)
@@ -42,9 +44,11 @@ func TestSimpleMux(t *testing.T) {
 		{"http://test/", "", http.StatusNoContent},
 		{"http://test/hello", "Hello friend.", http.StatusOK},
 		{"http://test/hello/there/", "Why, hello there.", http.StatusOK},
-		{"http://test/hello/there",
-			"<a href=\"/hello/there/\">Moved Permanently</a>.\n\n",
-			http.StatusMovedPermanently},
+		{
+			"http://test/hello/there",
+			"<a href=\"/hello/there/\">Temporary Redirect</a>.\n\n",
+			http.StatusTemporaryRedirect,
+		},
 		{"http://test/hello/there/you", "Why, hello there.", http.StatusOK},
 		{"http://test/something/else/entirely", "", http.StatusNoContent},
 		{"http://test/hello/you", "", http.StatusNoContent},

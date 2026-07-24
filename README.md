@@ -7,6 +7,14 @@ reasonable to assume that you may have picked it up early in your journey of mas
 aren't comfortable running the tests and examples presented in the book you can either clone this
 repository and run it on your operating system's command line, or run them in a Docker container.
 
+The gRPC ecosystem introduced breaking changes shortly after this book went to print. The
+[ch12-2026](ch12-2026) directory contains a revised edition of Chapter 12 with code and text
+updated for contemporary Go and gRPC practices, while [ch12](ch12) continues to match the printed
+listings. See [ch12-2026/README.md](ch12-2026/README.md) for the revised chapter.
+
+Known corrections to the book, including places where this repository intentionally differs from
+the printed listings, are collected in [ERRATA.md](ERRATA.md).
+
 ## Running the examples on your command line:
 
 Make sure you have `git` installed on your command line. If not, these [instructions](https://docs.github.com/en/github-cli)
