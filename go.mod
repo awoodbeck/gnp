@@ -65,7 +65,7 @@ require (
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-sql-driver/mysql v1.10.0 // indirect
 	github.com/golang/snappy v1.0.0 // indirect
-	github.com/google/cel-go v0.28.1 // indirect
+	github.com/google/cel-go v0.29.0 // indirect
 	github.com/google/certificate-transparency-go v1.1.8-0.20240110162603-74a5dd331745 // indirect
 	github.com/google/go-tpm v0.9.8 // indirect
 	github.com/google/go-tspi v0.3.0 // indirect
