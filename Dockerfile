@@ -1,4 +1,4 @@
-FROM golang:1.25.0
+FROM golang:1.27.4
 
 WORKDIR /usr/src/gnp
 
