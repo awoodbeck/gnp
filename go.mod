@@ -5,7 +5,7 @@ go 1.27.4
 require (
 	github.com/awoodbeck/caddy-restrict-prefix v1.0.5
 	github.com/awoodbeck/caddy-toml-adapter v1.0.5
-	github.com/awoodbeck/gnp/ch14/feed v0.0.0-20261112032101-41b338615b8e
+	github.com/awoodbeck/gnp/ch14/feed v0.0.0-20261112144334-9c3d47188e57
 	github.com/aws/aws-lambda-go v1.55.1
 	github.com/caddyserver/caddy/v2 v2.11.9
 	github.com/go-kit/kit v0.13.0
