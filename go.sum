@@ -69,6 +69,8 @@ github.com/awoodbeck/gnp/ch14/feed v0.0.0-20261111221001-c11fb0cbc0fd h1:GLVT/81
 github.com/awoodbeck/gnp/ch14/feed v0.0.0-20261111221001-c11fb0cbc0fd/go.mod h1:hhBF6plyfN7ZdkHe84VSBl2xaTdYiJPFQyGr4zk0MXU=
 github.com/awoodbeck/gnp/ch14/feed v0.0.0-20261112032101-41b338615b8e h1:oGHKvyDT3j6HBwa/J75YDOHKiryDjEKmkknEdyVtXoY=
 github.com/awoodbeck/gnp/ch14/feed v0.0.0-20261112032101-41b338615b8e/go.mod h1:hhBF6plyfN7ZdkHe84VSBl2xaTdYiJPFQyGr4zk0MXU=
+github.com/awoodbeck/gnp/ch14/feed v0.0.0-20261112144334-9c3d47188e57 h1:uMqT1LiHJ1qxCBzup3cJDqn+li+qkzPIGdEpgWRkAzM=
+github.com/awoodbeck/gnp/ch14/feed v0.0.0-20261112144334-9c3d47188e57/go.mod h1:hhBF6plyfN7ZdkHe84VSBl2xaTdYiJPFQyGr4zk0MXU=
 github.com/aws/aws-lambda-go v1.54.0 h1:EGYpdyRGF88xszqlGcBewz811mJeRS+maNlLZXFheII=
 github.com/aws/aws-lambda-go v1.54.0/go.mod h1:dpMpZgvWx5vuQJfBt0zqBha60q7Dd7RfgJv23DymV8A=
 github.com/aws/aws-lambda-go v1.55.1 h1:We2cCp4BwqqH/JW+bEEo1FhgG71rslvjfi4y7KmlrR0=
